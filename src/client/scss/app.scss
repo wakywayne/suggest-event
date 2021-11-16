@@ -1,0 +1,13 @@
+$theme-colors: (
+  "primary": lightGreen //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.width {
+  width: 20vw;
+
+  @media (max-width: 767px) {
+    width: 100vw;
+  }
+}

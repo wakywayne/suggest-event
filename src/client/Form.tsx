@@ -7,7 +7,7 @@ export default function Form({ submit, setStates }) {
 
 
     return (
-        <div>
+        <div className="p-0">
             <form action="post" style={{ border: '2px solid black', borderRadius: '3px' }} className="my-2 p-2">
 
                 <div className="my-1">

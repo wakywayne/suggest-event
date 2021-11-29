@@ -27,11 +27,16 @@ const find = (column: string, value: string | number) => {
   ]);
 };
 
+const insert = (newUser: { personsname: string, email: string, password: string }) => {
+  Query('Insert into suggestedeventsusers SET ?', [newUser]);
+}
+
 export default {
   allsuggestedevents,
   allsuggestedeventsusers,
   addEvent,
   find,
+  insert,
 };
 
 // blogs.ts?:45:27)

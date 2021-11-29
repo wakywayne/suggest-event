@@ -1,8 +1,11 @@
 $theme-colors: (
-  "primary": lightGreen //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,,
+  "primary": rgb(30, 230, 30), 
+  "secondary": blue,
+  "dark": rgb(0,0,0),
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
 
 .width {
   width: 20vw;
@@ -10,4 +13,22 @@ $theme-colors: (
   @media (max-width: 767px) {
     width: 100vw;
   }
+}
+
+.Logo {
+  background-image: url(../pictures/warZoneLogo.jpg);
+  background-size: contain;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.nav-hover:hover{
+  background-color: blue;
+  border-radius: 5000000px;
+ color:white;
+}
+.nav-hover:focus{
+  background-color: blue;
+  border-radius: 5000000px;
+ color:white;
 }

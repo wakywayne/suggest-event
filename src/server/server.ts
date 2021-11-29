@@ -1,19 +1,19 @@
 import * as express from "express";
+import * as path from 'path';
 import apiRouter from "./routes/index";
-import * as passport from 'passport';
-import * as PassportLocal from 'passport-local';
+import {configurePassport} from './middleware/passport-stradegies';
 
-
-import './middleware/passport-stradegies';
 
 const app = express();
 
-console.log(passport);
-
-app.use(passport.initialize());
+configurePassport(app);
 app.use(express.static("public"));
 app.use(express.json());
 app.use(apiRouter);
+app.get(['*'], (req, res, next) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+}
+)
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port: ${port}`));

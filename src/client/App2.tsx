@@ -11,12 +11,17 @@ export default function App2() {
   const [EventDescriptions, setEventDescription]: any = useState('');
   const [EventDates, setEventDate]: any = useState('');
   const [uselessState, setuselessState]: any = useState(0);
+  const [form2Key, setForm2Key] = useState(0);
+
+
+
+  const TOKEN = localStorage.getItem('token');
 
   const requestOptions = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      // Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${TOKEN}`,
     },
     body: JSON.stringify({
       eventname: EventNames,
@@ -38,6 +43,7 @@ export default function App2() {
       }
     });
     setuselessState(uselessState + 1);
+    setForm2Key(form2Key + 1);
   }
 
 
@@ -47,7 +53,7 @@ export default function App2() {
       <h1 className="mt-1 mb-2 text-center">Welcome to the suggest an event page</h1>
       <div className="row">
         <Center>
-          <Form submit={eventSubmit} setStates={{
+          <Form key={form2Key} submit={eventSubmit} setStates={{
             name: setEventName,
             description: setEventDescription,
             date: setEventDate,

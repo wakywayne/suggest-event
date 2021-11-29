@@ -2,6 +2,7 @@ import * as express from "express";
 import Blogs from "../../db/blogs";
 import config from "../../config";
 import pizza from './pizza'
+import {tokenCheck} from '../../middleware/auth';
 
 const router = express.Router();
 
@@ -29,8 +30,7 @@ router.get("/suggestedeventsusers", async (req, res) => {
   }
 });
 
-router.post("/suggestedevents", async (req, res) => {
-  console.log(req.body.eventname);
+router.post("/suggestedevents", tokenCheck, async (req, res) => {
   try {
     res.json(
       await Blogs.addEvent(

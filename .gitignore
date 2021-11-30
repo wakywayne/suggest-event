@@ -5,8 +5,6 @@ node_modules/
 dist/
 public/js/app.js
 
-src/server/config
-
 .env
 
 package-lock.json

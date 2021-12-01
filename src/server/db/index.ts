@@ -1,9 +1,9 @@
 import * as mysql from "mysql";
-import config from "../config";
+import * as config from "../config";
 
-export const Connection = mysql.createConnection(config.mysql);
+export const Connection: any = mysql.createConnection(config.mysql);
 
-Connection.connect((err) => {
+Connection.connect((err:any) => {
   if (err) console.log(err);
 });
 

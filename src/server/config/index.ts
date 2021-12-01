@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export default {
-  mysql: {
+  sql:{
     host: process.env.MYSQL_HOST,
     port: process.env.MYSQL_PORT,
     user: process.env.MYSQL_USER,
@@ -17,3 +17,8 @@ export default {
     secret: process.env.JWT_SECRET,
   }
 };
+
+interface Connection {
+  name: string;
+  age: number;
+}

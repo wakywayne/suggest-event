@@ -4,7 +4,6 @@ export interface ExampleInterface {
   password: string;
   created_at: Date;
 }
-
 export interface Users {
   password: any;
   id: number;

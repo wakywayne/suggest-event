@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Style from 'styled-components'
 import { Center } from './styles'
 
-export default function Form({ submit, setStates }: any) {
+export default function Form({ submit, setStates }) {
 
 
     return (

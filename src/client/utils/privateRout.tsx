@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Outlet, Navigate } from 'react-router';
 
-export default function PrivateRout({ children }: any) {
+export default function PrivateRout({ children }) {
     // TOKEN validation here
 
     const TOKEN = localStorage.getItem('token');

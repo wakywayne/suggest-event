@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Cards({ useless }) {
+export default function Cards({ useless }: any) {
 
     const [Coding, setCoding]: any = React.useState([]);
 
@@ -28,7 +28,7 @@ export default function Cards({ useless }) {
         <>
             <div className="d-flex justify-content-center flex-wrap">
                 {
-                    Coding.map((event) => {
+                    Coding.map((event: any) => {
                         return (
                             <div key={event.id} className="width card mx-5 mb-1 pb-0">
                                 <h3 title="Title" className="card-header">{event.eventname}</h3>

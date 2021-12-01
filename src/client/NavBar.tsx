@@ -8,6 +8,7 @@ export default function NavbarComponent() {
     const navigate = useNavigate();
     const logout = () => {
         localStorage.removeItem("token");
+        alert("You've been logged out");
         navigate("/");
     }
 

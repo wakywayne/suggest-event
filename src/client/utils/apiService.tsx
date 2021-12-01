@@ -1,7 +1,7 @@
 // example path to file:
 // src/client/services/api-service.ts
 
-export async function apiService<T = any>(url: string, method: string = 'GET', data?: any) {
+export async function apiService(url: string, method: string = 'GET', data?: any) {
     // retrieve token from storage
     const TOKEN = localStorage.getItem('token');
     // prepare a headers object to build
@@ -9,12 +9,11 @@ export async function apiService<T = any>(url: string, method: string = 'GET', d
         'Content-Type': 'application/json'
     };
     // prepare out fetch options to build
-    const fetchOptions: IFetchOptions = {
+    const fetchOptions = {
         method,
         headers,
         body: JSON.stringify(data)
     };
-
     // if the token is found, attach it to headers
     // using the Authorization Bearer scheme
     if (TOKEN) {

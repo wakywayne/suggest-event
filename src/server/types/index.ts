@@ -9,9 +9,3 @@ export interface ReqUser extends express.Request{
     creatrd_at?: Date;
   }
 }
-
-export interface Payload{
-    userid: number;
-    email: string;
-    role: number; 
-}

@@ -1,4 +1,4 @@
-import config from '../config'
+import config from '../config';
 import blogs from "../db/blogs";
 import * as passport from 'passport';
 import * as PassportLocal from 'passport-local';

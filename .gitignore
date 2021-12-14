@@ -7,3 +7,5 @@ public/js/app.js
 
 package-lock.json
 
+.env
+

@@ -5,6 +5,8 @@ node_modules/
 dist/
 public/js/app.js
 
+SuggestAnEventDB
+
 package-lock.json
 
 .env

@@ -23,7 +23,9 @@ export default function Register() {
 
             apiService('/auth/register', 'POST', account)
                 .then(token => {
-                    localStorage.setItem('token', token);
+                   
+                    localStorage.setItem('token', token.token);
+                    localStorage.setItem('uId', token.userId);
                     navigate('/suggestEvent');
                     setRegisterFormKey(registerformKey + 1);
                 })

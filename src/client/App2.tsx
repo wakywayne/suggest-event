@@ -27,17 +27,17 @@ export default function App2() {
       eventname: EventNames,
       eventdescription: EventDescriptions,
       eventdate: EventDates,
-      userId: 1
+      userId: parseInt(localStorage.getItem('uId'))
     }),
   };
 
   const eventSubmit = (e: any) => {
     e.preventDefault();
-
+    console.log("submitting")
 
     fetch(`/api/suggestedevents/`, requestOptions).then((res) => {
       if (res.ok) {
-
+          console.log("DATA",res.status);
       } else {
         alert("it didn't work! Coach Wayne Apologizes try again later");
       }
